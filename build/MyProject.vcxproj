@@ -372,7 +372,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="D:\Cmake\test_project\include\head.h" />
+    <ClCompile Include="D:\Cmake\test_project\src\add.cpp" />
+    <ClCompile Include="D:\Cmake\test_project\src\div.cpp" />
     <ClCompile Include="D:\Cmake\test_project\src\main.cpp" />
+    <ClCompile Include="D:\Cmake\test_project\src\mult.cpp" />
+    <ClCompile Include="D:\Cmake\test_project\src\sub.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

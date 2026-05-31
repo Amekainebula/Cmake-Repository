@@ -18,7 +18,7 @@ set(OUTPUT_DIR "D:/Cmake/test_output")
 
 # set(EXECUTABLE_OUTPUT_PATH ${OUTPUT_DIR}/bin)
 
-file(GLOB SRC ${PROJECT_SOURCE_DIR}/src/*.cpp)
+file(GLOB SRC ${PROJECT_SOURCE_DIR}/src/*.cpp ${PROJECT_SOURCE_DIR}/include/*.h)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_DIR}/bin)
 
