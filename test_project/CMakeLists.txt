@@ -14,7 +14,7 @@ include_directories($(PROJECT_SOURCE_DIR)/include)
 
 # aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC)
 
-set(OUTPUT_DIR "./test_output")
+set(OUTPUT_DIR "D:/Cmake/test_project/test_output")
 
 # set(EXECUTABLE_OUTPUT_PATH ${OUTPUT_DIR}/bin)
 
