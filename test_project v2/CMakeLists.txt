@@ -10,15 +10,23 @@ file(GLOB SRC
 
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
-# add_library(calc STATIC ${SRC})
-add_library(calc SHARED ${SRC})
+add_library(sals STATIC ${SRC})
 
+# add_library(calc SHARED ${SRC})
 
-target_include_directories(calc PUBLIC
+# target_include_directories(calc PUBLIC
+#     ${PROJECT_SOURCE_DIR}/include
+# )
+
+target_include_directories(sals PUBLIC
     ${PROJECT_SOURCE_DIR}/include
 )
 
 add_executable(main main.cpp)
 
-target_link_libraries(main PRIVATE calc)
+target_link_libraries(main PRIVATE sals)
+
+# target_link_libraries(main PRIVATE calc)
+
+
 
