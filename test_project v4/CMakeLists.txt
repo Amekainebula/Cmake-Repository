@@ -11,7 +11,7 @@ file(GLOB SRC
 
 list(REMOVE_ITEM SRC ${PROJECT_SOURCE_DIR}/main.cpp)
 
-message(${SRC})
+# message(${SRC})
 
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
@@ -27,7 +27,13 @@ target_include_directories(calc PUBLIC
 #     ${PROJECT_SOURCE_DIR}/include
 # )
 
-# add_executable(main main.cpp)
+add_definitions(-DDEBUG)
+
+add_executable(main main.cpp)
+
+target_include_directories(main PUBLIC ${PROJECT_SOURCE_DIR}/include)
+
+target_link_libraries(main PUBLIC ${PROJECT_SOURCE_DIR}/lib/Debug/calc.lib)
 
 # target_link_libraries(main PRIVATE sals)
 
