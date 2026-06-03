@@ -13,3 +13,9 @@ target_include_directories(${APP_TEST_SORT} PUBLIC ${HEAD_PATH})
 target_link_directories(${APP_TEST_SORT} PUBLIC ${LIB_PATH})
 
 target_link_libraries(${APP_TEST_SORT} PUBLIC ${SORT_LIB})
+
+add_custom_command(TARGET ${APP_TEST_SORT} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "$<TARGET_FILE:${SORT_LIB}>"
+        "$<TARGET_FILE_DIR:${APP_TEST_SORT}>"
+)
