@@ -12,7 +12,7 @@ find_package(Qt6 REQUIRED COMPONENTS Widgets)
 # nlohmann-json (header-only)
 set(JSON_DIR D:/APP/nlohmann-json/single_include)
 
-file(GLOB SRC src/*.cpp src/*.h)
+file(GLOB SRC src/*.cpp src/*.h src/*.rc)
 
 add_executable(${PROJECT_NAME} WIN32 ${SRC})
 
@@ -23,3 +23,4 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     winhttp
     ws2_32
 )
+
